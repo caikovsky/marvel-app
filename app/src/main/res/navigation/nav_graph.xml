@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/characterFragment">
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.cmaurano.recipes.ui.post.CharactersFragment"
+        tools:layout="@layout/characters_fragment"
+        android:label="CharactersFragment" >
+        <action
+            android:id="@+id/action_characterFragment_to_comicFragment"
+            app:destination="@id/comicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicFragment"
+        tools:layout="@layout/fragment_character_comics"
+        android:name="com.cmaurano.recipes.ui.comic.ComicFragment"
+        android:label="ComicFragment" />
+</navigation>
